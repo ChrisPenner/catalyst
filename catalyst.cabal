@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: da97ea84712a84cdccd5c546af37b72c95c6fb2f3871cd26ab7509c1596553fb
+-- hash: df46279033ef422a31424dd262f63e07829b460ca5d41db8a2efaafc19af3c0a
 
 name:           catalyst
 version:        0.1.0.0
@@ -27,8 +27,8 @@ source-repository head
 
 library
   exposed-modules:
-      Control.Category.Associative
       Control.Category.Cartesian
+      Control.Category.Closed
       Control.Category.Monoidal
       Control.Category.Recursive
       Control.Category.Strength
@@ -39,31 +39,4 @@ library
   default-extensions: TypeOperators FlexibleInstances FlexibleContexts ScopedTypeVariables LambdaCase ViewPatterns TypeApplications TypeOperators DeriveFunctor DeriveTraversable DeriveGeneric DerivingStrategies StandaloneDeriving TemplateHaskell RankNTypes GADTs
   build-depends:
       base >=4.7 && <5
-  default-language: Haskell2010
-
-executable catalyst-exe
-  main-is: Main.hs
-  other-modules:
-      Paths_catalyst
-  hs-source-dirs:
-      app
-  default-extensions: TypeOperators FlexibleInstances FlexibleContexts ScopedTypeVariables LambdaCase ViewPatterns TypeApplications TypeOperators DeriveFunctor DeriveTraversable DeriveGeneric DerivingStrategies StandaloneDeriving TemplateHaskell RankNTypes GADTs
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , catalyst
-  default-language: Haskell2010
-
-test-suite catalyst-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  other-modules:
-      Paths_catalyst
-  hs-source-dirs:
-      test
-  default-extensions: TypeOperators FlexibleInstances FlexibleContexts ScopedTypeVariables LambdaCase ViewPatterns TypeApplications TypeOperators DeriveFunctor DeriveTraversable DeriveGeneric DerivingStrategies StandaloneDeriving TemplateHaskell RankNTypes GADTs
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , catalyst
   default-language: Haskell2010
