@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: df46279033ef422a31424dd262f63e07829b460ca5d41db8a2efaafc19af3c0a
+-- hash: 1183ef5a7f8318ca45bc7a1034e88d62a020ac6ef654309380316903551ddd56
 
 name:           catalyst
 version:        0.1.0.0
@@ -39,4 +39,5 @@ library
   default-extensions: TypeOperators FlexibleInstances FlexibleContexts ScopedTypeVariables LambdaCase ViewPatterns TypeApplications TypeOperators DeriveFunctor DeriveTraversable DeriveGeneric DerivingStrategies StandaloneDeriving TemplateHaskell RankNTypes GADTs
   build-depends:
       base >=4.7 && <5
+    , profunctors
   default-language: Haskell2010
