@@ -1,8 +1,7 @@
 {-# LANGUAGE DefaultSignatures #-}
 module Control.Category.Monoidal where
 
-import Control.Category (Category, (>>>), (<<<))
-import qualified Control.Category as C
+import Control.Category (Category, (>>>))
 import qualified Control.Arrow as A
 
 class Symmetric k => MonoidalProduct k where

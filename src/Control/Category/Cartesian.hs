@@ -23,11 +23,15 @@ class Category k => Cocartesian k where
   injectL :: a `k` (Either a b)
   injectR :: a `k` (Either b a)
   unify :: Either a a `k` a
+  -- | tags 'Right' when 'True', 'Left' when 'False'
+  tag :: k (Bool, a) (Either a a)
 
 instance Cocartesian (->) where
   injectL = Left
   injectR = Right
   unify = either id id
+  tag (True, a) = Right a
+  tag (False, a) = Left a
 
 (|||) :: (Cocartesian k, MonoidalSum k) => (al `k` b) -> (ar `k` b) -> (Either al ar `k` b)
 (|||) l r = (l +++ r) >>> unify

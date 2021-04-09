@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1183ef5a7f8318ca45bc7a1034e88d62a020ac6ef654309380316903551ddd56
+-- hash: 1f541d690772ef303b296e80f80f591753f0b4dba057920d813c6e593f7ed8d3
 
 name:           catalyst
 version:        0.1.0.0
@@ -30,6 +30,7 @@ library
       Control.Category.Cartesian
       Control.Category.Closed
       Control.Category.Monoidal
+      Control.Category.Numeric
       Control.Category.Recursive
       Control.Category.Strength
   other-modules:
