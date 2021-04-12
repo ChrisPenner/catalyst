@@ -4,16 +4,17 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 00608005bfac0039c36db176a4a977f5b6aaadb8e0ae1b8ef9bd6bdf16906a2e
+-- hash: 3ff2d7f6f18494c402cb5005bb0958895552a0e6e880e40abfd2a9c523201627
 
 name:           catalyst
-version:        0.1.0.0
+version:        0.0.0.0
+synopsis:       A Category typeclass hierarchy powerful enough to encode full programs.
 description:    Please see the README on GitHub at <https://github.com/githubuser/catalyst#readme>
-homepage:       https://github.com/githubuser/catalyst#readme
-bug-reports:    https://github.com/githubuser/catalyst/issues
-author:         Author name here
+homepage:       https://github.com/ChrisPenner/catalyst#readme
+bug-reports:    https://github.com/ChrisPenner/catalyst/issues
+author:         Chris Penner
 maintainer:     example@example.com
-copyright:      2021 Author name here
+copyright:      2021 Chris Penner
 license:        BSD3
 license-file:   LICENSE
 build-type:     Simple
@@ -23,7 +24,7 @@ extra-source-files:
 
 source-repository head
   type: git
-  location: https://github.com/githubuser/catalyst
+  location: https://github.com/ChrisPenner/catalyst
 
 library
   exposed-modules:
