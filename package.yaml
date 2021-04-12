@@ -1,5 +1,5 @@
 name:                catalyst
-version:             0.0.0.0
+version:             0.0.0.1
 github:              "ChrisPenner/catalyst"
 license:             BSD3
 author:              "Chris Penner"
@@ -14,7 +14,7 @@ extra-source-files:
 synopsis:              A Category typeclass hierarchy powerful enough to encode full programs.
 # category:            Web
 
-description:         Please see the README on GitHub at <https://github.com/githubuser/catalyst#readme>
+description:         Please see the README on GitHub at <https://github.com/ChrisPenner/catalyst#readme>
 
 dependencies:
 - base >= 4.7 && < 5
