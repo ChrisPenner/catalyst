@@ -4,7 +4,7 @@ module Control.Category.Monoidal where
 import Control.Category (Category, (>>>))
 import qualified Control.Arrow as A
 
-class Symmetric k => MonoidalProduct k where
+class SymmetricProduct k => MonoidalProduct k where
   {-# MINIMAL first' | second' #-}
   (***) :: (al `k` bl) -> (ar `k` br) -> ((al, ar) `k` (bl, br))
   l *** r = first' l >>> second' r
@@ -18,8 +18,7 @@ instance MonoidalProduct (->) where
   first' = A.first
   second' = A.second
 
-
-class Symmetric k => MonoidalSum k where
+class SymmetricSum k => MonoidalSum k where
   {-# MINIMAL left | right #-}
   (+++) :: (al `k` bl) -> (ar `k` br) -> ((Either al ar) `k` (Either bl br))
   l +++ r = left l >>> right r
@@ -33,16 +32,27 @@ instance MonoidalSum (->) where
   left = A.left
   right = A.right
 
-class Category k => Symmetric k where
+class Category k => SymmetricProduct k where
   swap :: (l, r) `k` (r, l)
+  reassoc :: (a, (b, c)) `k` ((a, b), c)
+
+class Category k => SymmetricSum k where
   swapE :: (Either l r) `k` (Either r l)
-  -- reassoc :: (a, (b, c)) `k` ((a, b), c)
-  -- reassoc' :: (a, (b, c)) `k` ((a, b), c)
-  -- reassocE :: (Either a (Either b c)) `k` Either (Either a b) c
-  -- reassocE' :: Either (Either a b) c `k` (Either a (Either b c))
+  reassocE :: (Either a (Either b c)) `k` Either (Either a b) c
 
-
-instance Symmetric (->) where
+instance SymmetricProduct (->) where
   swap (a, b) = (b, a)
+  reassoc (a, (b, c)) = ((a, b), c)
+
+instance SymmetricSum (->) where
   swapE (Left a) = Right a
   swapE (Right a) = Left a
+  reassocE (Left a) = Left (Left a)
+  reassocE (Right (Left b)) = Left (Right b)
+  reassocE (Right (Right c)) = Right c
+
+class CategoryPlus k => CategoryZero k where
+  zeroC :: k a b
+
+class Category k => CategoryPlus k where
+  (<+>) :: k a b -> k a b -> k a b

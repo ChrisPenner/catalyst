@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 1f541d690772ef303b296e80f80f591753f0b4dba057920d813c6e593f7ed8d3
+-- hash: 00608005bfac0039c36db176a4a977f5b6aaadb8e0ae1b8ef9bd6bdf16906a2e
 
 name:           catalyst
 version:        0.1.0.0
@@ -29,15 +29,16 @@ library
   exposed-modules:
       Control.Category.Cartesian
       Control.Category.Closed
+      Control.Category.Free
       Control.Category.Monoidal
       Control.Category.Numeric
       Control.Category.Recursive
-      Control.Category.Strength
   other-modules:
       Paths_catalyst
   hs-source-dirs:
       src
-  default-extensions: TypeOperators FlexibleInstances FlexibleContexts ScopedTypeVariables LambdaCase ViewPatterns TypeApplications TypeOperators DeriveFunctor DeriveTraversable DeriveGeneric DerivingStrategies StandaloneDeriving TemplateHaskell RankNTypes GADTs
+  default-extensions: TypeOperators FlexibleInstances FlexibleContexts ScopedTypeVariables LambdaCase ViewPatterns TypeApplications TypeOperators DeriveFunctor DeriveTraversable DeriveGeneric DerivingStrategies StandaloneDeriving TemplateHaskell RankNTypes GADTs PolyKinds
+  ghc-options: -Wall
   build-depends:
       base >=4.7 && <5
     , profunctors

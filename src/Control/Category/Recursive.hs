@@ -1,6 +1,6 @@
 module Control.Category.Recursive where
 
-import Control.Category (Category, (>>>), (<<<))
+import Control.Category (Category)
 import qualified Data.Profunctor.Choice as P
 import qualified Data.Profunctor.Strong as P
 
