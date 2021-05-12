@@ -41,7 +41,7 @@ data Requirements =
 
 type family ConstraintsOf (x :: anykind) (k :: * -> * -> *) = (c :: Constraint) where
   -- The constraints of a 'Requirements' are the constriants of each class-requirement
-  ConstraintsOf ('Req cat symP symS monP monS cart cocart rec fix) k = 
+  ConstraintsOf ('Req cat symP symS monP monS cart cocart rec fix) k =
       ( ConstraintsOf cat k
       , ConstraintsOf symP k
       , ConstraintsOf symS k
@@ -73,7 +73,7 @@ type family ConstraintsOf (x :: anykind) (k :: * -> * -> *) = (c :: Constraint) 
   ConstraintsOf 'NoRecursive cat = ()
   ConstraintsOf 'NoFixed cat = ()
 
-type FreeFunction c a b =
+type FreeFunction c =
     Catalyst
       ('Req
           'HasCategory
