@@ -1,3 +1,9 @@
-resolver: lts-17.8
+resolver: lts-18.10
+
 packages:
 - .
+
+extra-deps:
+- free-category-0.0.4.3@sha256:44f1f6d5a08f5067768fdddb88c3ac56290361cddb52c23aa552234f34e6717c,2314
+- free-algebras-0.1.0.1@sha256:ebaac4d07ecf4a3ba106dc064a102ea82c44deabc2e79fcec21a4df40ddc17a2,2525
+

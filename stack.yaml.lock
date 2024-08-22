@@ -3,10 +3,24 @@
 # For more information, please see the documentation at:
 #   https://docs.haskellstack.org/en/stable/lock_files
 
-packages: []
+packages:
+- completed:
+    hackage: free-category-0.0.4.3@sha256:44f1f6d5a08f5067768fdddb88c3ac56290361cddb52c23aa552234f34e6717c,2314
+    pantry-tree:
+      size: 903
+      sha256: 03509449c8b58b9200c199bf1b92d4ea644b1c17fdc20e9194fb1fcd89093e87
+  original:
+    hackage: free-category-0.0.4.3@sha256:44f1f6d5a08f5067768fdddb88c3ac56290361cddb52c23aa552234f34e6717c,2314
+- completed:
+    hackage: free-algebras-0.1.0.1@sha256:ebaac4d07ecf4a3ba106dc064a102ea82c44deabc2e79fcec21a4df40ddc17a2,2525
+    pantry-tree:
+      size: 1139
+      sha256: c05ea9c4db9709f4114f89431c893a2376545b2d35be7379531b00092c58e333
+  original:
+    hackage: free-algebras-0.1.0.1@sha256:ebaac4d07ecf4a3ba106dc064a102ea82c44deabc2e79fcec21a4df40ddc17a2,2525
 snapshots:
 - completed:
-    size: 565720
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/17/8.yaml
-    sha256: 76bf8992ff8dfe6eda9c02f81866138c2369344d5011ab39ae403457c4448b03
-  original: lts-17.8
+    size: 587546
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/18/10.yaml
+    sha256: 88b4f81e162ba3adc230a9fcccc4d19ac116377656bab56c7382ca88598b257a
+  original: lts-18.10

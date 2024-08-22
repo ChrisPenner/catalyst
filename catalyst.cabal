@@ -1,15 +1,15 @@
 cabal-version: 1.12
 
--- This file has been generated from package.yaml by hpack version 0.33.0.
+-- This file has been generated from package.yaml by hpack version 0.34.4.
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 3ff2d7f6f18494c402cb5005bb0958895552a0e6e880e40abfd2a9c523201627
+-- hash: 6409f91288fe048eba9e3f49b16bdb3fff79a6af88c70fdbdb7e02e066f9f850
 
 name:           catalyst
-version:        0.0.0.0
+version:        0.0.0.1
 synopsis:       A Category typeclass hierarchy powerful enough to encode full programs.
-description:    Please see the README on GitHub at <https://github.com/githubuser/catalyst#readme>
+description:    Please see the README on GitHub at <https://github.com/ChrisPenner/catalyst#readme>
 homepage:       https://github.com/ChrisPenner/catalyst#readme
 bug-reports:    https://github.com/ChrisPenner/catalyst/issues
 author:         Chris Penner
@@ -30,17 +30,40 @@ library
   exposed-modules:
       Control.Category.Cartesian
       Control.Category.Closed
+      Control.Category.Compose
       Control.Category.Free
+      Control.Category.Mon
       Control.Category.Monoidal
       Control.Category.Numeric
+      Control.Category.Product
       Control.Category.Recursive
+      Control.Category.State
+      Control.Category.Trans
   other-modules:
       Paths_catalyst
   hs-source-dirs:
       src
-  default-extensions: TypeOperators FlexibleInstances FlexibleContexts ScopedTypeVariables LambdaCase ViewPatterns TypeApplications TypeOperators DeriveFunctor DeriveTraversable DeriveGeneric DerivingStrategies StandaloneDeriving TemplateHaskell RankNTypes GADTs PolyKinds
+  default-extensions:
+      TypeOperators
+      FlexibleInstances
+      FlexibleContexts
+      ScopedTypeVariables
+      LambdaCase
+      ViewPatterns
+      TypeApplications
+      TypeOperators
+      DeriveFunctor
+      DeriveTraversable
+      DeriveGeneric
+      DerivingStrategies
+      StandaloneDeriving
+      TemplateHaskell
+      RankNTypes
+      GADTs
+      PolyKinds
   ghc-options: -Wall
   build-depends:
       base >=4.7 && <5
+    , free-category
     , profunctors
   default-language: Haskell2010
